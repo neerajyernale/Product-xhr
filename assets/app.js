@@ -58,7 +58,7 @@ function creatCart(arr) {
                         $${ele.price}
                     </h4>
                 </div>
-                <div class="card-footer bg-white border-0">
+                <div class="card-footer bg-success border-0">
                     <div class="d-flex justify-content-between">
                         <button
                             class="btn btn-outline-primary btn-sm"
