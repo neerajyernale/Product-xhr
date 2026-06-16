@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body >
+  <div class="container">
+    <div class="text-center mb-4">
+            <h2>
+                <i class="fa-solid fa-bag-shopping mr-2"></i>
+                Product Management
+            </h2>
+            <p class="text-muted">
+                Manage products using XHR CRUD operations
+            </p>
+        </div>
+           <div class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">
+                            <i class="fa-solid fa-plus-circle mr-2"></i>
+                            Add/Update Product Poratl
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="productForm">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="title">Product Title</label>
+                                    <input type="text"
+                                        class="form-control"
+                                        id="title"
+                                        placeholder="Enter product title">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="price">Price</label>
+                                    <input type="number"
+                                        class="form-control"
+                                        id="price"
+                                        placeholder="Enter price">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+
+                                <textarea class="form-control"
+                                    id="description"
+                                    rows="3"
+                                    placeholder="Enter description"></textarea>
+                            </div>
+                            <div class="row">
+
+                                <div class="form-group col-md-6">
+                                    <label for="category">Category</label>
+
+                                    <input type="text"
+                                        class="form-control"
+                                        id="category"
+                                        placeholder="Enter category">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="image">Image URL</label>
+                                    <input type="text"
+                                        class="form-control"
+                                        id="image"
+                                        placeholder="Paste image URL">
+                                </div>
+                            </div>
+
+                            <button
+                                class="btn btn-primary btn-block"
+                                id="butEdit">
+                                <i class="fa-solid fa-plus mr-2"></i>
+                                Add Product
+                            </button>
+                            <button
+                                class="btn btn-success btn-block d-none"
+                                id="updatebtn" type="button">
+                                <i class="fa-solid fa-pen-to-square mr-2"></i>
+                                Update Product
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="cardContainer"></div>
+    </div>
+     <div class="spinner d-none" id="spinner">
+      <div class="spinner-border text-primary" role="status"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/app.js"></script>
+</body>
+</html>
+
