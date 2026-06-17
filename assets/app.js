@@ -81,6 +81,8 @@ function creatCart(arr) {
 }
 
 function onSubmitCard(eve) {
+    spinner.classList.remove('d-none');
+
     
     eve.preventDefault();
     
@@ -183,6 +185,8 @@ function onEdit(ele) {
 }
 
 function onUpdate() {
+    spinner.classList.remove('d-none');
+
     let updateId = localStorage.getItem("editId");
     let updatedObj = {
         title: title.value,
@@ -214,7 +218,7 @@ function onUpdate() {
                 timer: 3000,
                 showConfirmButton: false,
             });
-
+            spinner.classList.add('d-none');            
             productForm.reset();
             butEdit.classList.remove("d-none");
             updatebtn.classList.add("d-none");
